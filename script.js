@@ -4,7 +4,7 @@ carousel();
 
 function carousel() {
     const carouselSlide = document.querySelector(".carousel-slides");
-    const carouselImages = document.querySelectorAll(".carousel-slides div");
+    const carouselImages = document.querySelectorAll(".carousel-slides img");
     let size = carouselImages[0].clientWidth;
 
     index++;
