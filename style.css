@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body, html {
@@ -9,22 +10,107 @@ body, html {
     padding: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
-}
+} 
 
-.parallex {
-    position: relative;
+/* parallex starts here */
+
+#bg-img1, #bg-img2, #bg-img3, #bg-img4, #bg-img5 {
     opacity: 0.65;
+    position: relative;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
+    width: 100%;
+    flex-shrink: 0;
 }
 
-.bgimg-1 {
-    background-image: url("./images/img1.jpg");
+span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+/* parallex ends here */
+
+/* custom Carousel CSS */
+.carousel-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container button {
+    opacity: 0.6;
+    border-radius: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    border: none;
+    z-index: 10;
+    position: absolute;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* for removing blue outline from button when focused */
+.carousel-container button:focus {
+    outline: none;
+}
+
+.carousel-slides {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
     min-height: 100%;
 }
+
+#bg-img1, #bg-img5  {
+    background-image: url("./images/img4.jpg");
+    min-height: 100%;
+}
+
+#bg-img2 {
+    background-image: url("./images/img32.jpg");
+    min-height: 100%;
+}
+
+#bg-img3 {
+    background-image: url("./images/img4.jpg");
+    min-height: 100%;
+}
+
+#bg-img4 {
+    background-image: url("./images/img32.jpg");
+    min-height: 100%;
+}
+
+/* custom Carousel CSS ends here */
+
+/* overflowed elements css to make them overflow */
+.custom-container {
+    transform: translateY(-40%);
+}
+/* end of overflow */
+
+/* pink sign up box */
+.segment {
+    font-family: "Lato", sans-serif;
+    color: black;
+    letter-spacing: 3px;
+    padding: 30px;
+    background-color: bisque;
+    border-radius: 0 15px;
+}
+
+.segment h1 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+/* end of pink sign up box */
 
 .caption {
     position: absolute;
@@ -33,20 +119,9 @@ body, html {
     width: 100%;
     text-align: center;
     color: #000;
-}
+  }
 
-.caption span.border {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-}
-
-.custom-container {
-    transform: translateY(-40%);
-}
-
+/* fade effect slides */
 #fade-header {
     z-index: 1;
     position: absolute;
@@ -54,23 +129,6 @@ body, html {
     top: 70%;
     left: 50%;
     transform: translate(-50%, 50%);
-}
-
-@media (max-width: 767.98px) {
-    
-}
-
-@media (max-width: 575.98px) {
-    ul.slideshow {
-        height: 350px;
-    }
-}
-
-@media (min-width: 768px) {
-    .slideshow li.rounded {
-        width: 96%;
-        transform: translateX(2%);
-    }
 }
 
 #fade-header h1 {
@@ -98,7 +156,7 @@ body, html {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 45s linear infinite;
+    animation: imageAnimation 40s linear infinite;
 }
 
 .slideshow li:nth-child(1) {
@@ -107,22 +165,22 @@ body, html {
 
 .slideshow li:nth-child(2) {
     background-image: url("./images/img3.jpg");
-    animation-delay: 9s;
+    animation-delay: 8s;
 }
 
 .slideshow li:nth-child(3) {
     background-image: url("./images/img4.jpg");
-    animation-delay: 18s;
+    animation-delay: 16s;
 }
 
 .slideshow li:nth-child(4) {
     background-image: url("./images/img5.jpg");
-    animation-delay: 27s;
+    animation-delay: 24s;
 }
 
 .slideshow li:nth-child(5) {
     background-image: url("./images/img6.jpg");
-    animation-delay: 36s;
+    animation-delay: 32s;
 }
 
 @keyframes imageAnimation {
@@ -144,22 +202,31 @@ body, html {
         opacity: 0;
     }
 }
+/* fade effect slides ends here */
 
-.segment {
-    font-family: "Lato", sans-serif;
-    color: black;
-    letter-spacing: 3px;
-    padding: 30px;
-    background-color: bisque;
-    border-radius: 0 15px;
-}
-
-.segment h1 {
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
+/* overriding img-thumbnail of bootstrap using custom class*/
 img.custom-thumbnail {
     padding: 0px;
     border: 0px;
 }
+/* end */
+
+/* media queries */
+@media (max-width: 767.98px) {
+    
+}
+
+@media (max-width: 575.98px) {
+    ul.slideshow {
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .slideshow li.rounded {
+        width: 96%;
+        transform: translateX(2%);
+    }
+}
+
+/* media queries ends here */
