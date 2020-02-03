@@ -6,3 +6,5 @@ Developed By:
 Divyansh Arya
 Ashutosh Anand
 Vivek Singhal
+
+# Divyansh -- Like I have added categories, add testimonial and add footer also 
