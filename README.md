@@ -1,6 +1,5 @@
 # Online-Clothes-Store
 MINI PROJECT - II
-<<<<<<< HEAD
 For selling readymade and custom clothes
 
 Developed By:
