@@ -10,12 +10,19 @@ body, html {
     padding: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
-}
+} 
 
 /* parallex starts here */
 
-.parallex {
+#bg-img1, #bg-img2, #bg-img3, #bg-img4, #bg-img5 {
     opacity: 0.65;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 span.border {
@@ -36,7 +43,7 @@ span.border {
     position: relative;
 }
 
-.carousel-container a button {
+.carousel-container button {
     opacity: 0.6;
     border-radius: 20px;
     left: 50%;
@@ -45,19 +52,40 @@ span.border {
     border: none;
     z-index: 10;
     position: absolute;
-    cursor: pointer;
+    outline: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* for removing blue outline from button when focused */
+.carousel-container button:focus {
+    outline: none;
+}
+
 .carousel-slides {
+    flex-wrap: wrap;
     display: flex;
     width: 100%;
     min-height: 100%;
 }
 
-div.carousel-slides img {
+#bg-img1, #bg-img5  {
+    background-image: url("./images/img4.jpg");
     min-height: 100%;
-    width: 100%;
+}
+
+#bg-img2 {
+    background-image: url("./images/img32.jpg");
+    min-height: 100%;
+}
+
+#bg-img3 {
+    background-image: url("./images/img4.jpg");
+    min-height: 100%;
+}
+
+#bg-img4 {
+    background-image: url("./images/img32.jpg");
+    min-height: 100%;
 }
 
 /* custom Carousel CSS ends here */
@@ -83,6 +111,15 @@ div.carousel-slides img {
     font-size: 1.2rem;
 }
 /* end of pink sign up box */
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
 
 /* fade effect slides */
 #fade-header {
@@ -119,7 +156,7 @@ div.carousel-slides img {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 45s linear infinite;
+    animation: imageAnimation 40s linear infinite;
 }
 
 .slideshow li:nth-child(1) {
@@ -128,22 +165,22 @@ div.carousel-slides img {
 
 .slideshow li:nth-child(2) {
     background-image: url("./images/img3.jpg");
-    animation-delay: 9s;
+    animation-delay: 8s;
 }
 
 .slideshow li:nth-child(3) {
     background-image: url("./images/img4.jpg");
-    animation-delay: 18s;
+    animation-delay: 16s;
 }
 
 .slideshow li:nth-child(4) {
     background-image: url("./images/img5.jpg");
-    animation-delay: 27s;
+    animation-delay: 24s;
 }
 
 .slideshow li:nth-child(5) {
     background-image: url("./images/img6.jpg");
-    animation-delay: 36s;
+    animation-delay: 32s;
 }
 
 @keyframes imageAnimation {
