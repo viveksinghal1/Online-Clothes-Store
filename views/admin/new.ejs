@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Admin</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/" method="POST">
+                    <div class="form-group">
+                        <label for="clothName">Cloth Name</label>
+                        <input class="form-control" id="clothName" type="text"
+                            name="name" placeholder="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Cloth Image Address</label>
+                        <input class="form-control" id="image" type="text"
+                            name="image" placeholder="image address"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Cloth Price</label>
+                        <input class="form-control" id="price" type="number"
+                            name="price" placeholder="price" min="100"
+                            step="5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Cloth Category</label>
+                        <select class="form-control" id="category"
+                            name="category" required>
+                            <option value="Custom">Custom</option>
+                            <option value="Ladies ReadyMade">Ladies ReadyMade
+                            </option>
+                            <option value="Gents ReadyMade">Gents ReadyMade
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="size">Cloth Size</label>
+                        <select class="form-control" id="size"
+                            name="size" aria-describedby="sizeHelp"
+                            multiple>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XLL">XXL</option>
+                        </select>
+                        <small id="sizeHelp" class="form-text text-muted">Select
+                            Size if the Cloth is ReadyMade.</small>
+                    </div>
+                    <button class="btn btn-primary mt-2" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

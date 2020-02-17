@@ -1,80 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body,
 html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
 }
-
 
 /* content separating hr line */
 
 .line-across {
-    border-width: 5px;
-    border-top-color: cadetblue;
+  border-width: 5px;
+  border-top-color: cadetblue;
 }
 
 .line-up-text {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    z-index: 1;
-    background-color: #fff;
-    padding: 11px 10px;
-    transform: translate(-50%, -17%);
-    border-left: 3px solid cadetblue;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border-right: 3px solid cadetblue;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: 1;
+  background-color: #fff;
+  padding: 11px 10px;
+  transform: translate(-50%, -17%);
+  border-left: 3px solid cadetblue;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-right: 3px solid cadetblue;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .line-up-text span {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    letter-spacing: 4px;
-    color: darkcyan;
-    border-radius: 10px;
-    padding: 8px 40px;
-    background: #a8ff78;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #78ffd6, #a8ff78);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 4px;
+  color: darkcyan;
+  border-radius: 10px;
+  padding: 8px 40px;
+  background: #a8ff78;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #78ffd6, #a8ff78);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h3.line-up-text-2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    z-index: 10;
-    padding: 10px 30px;
-    letter-spacing: 4px;
-    transform: translate(-50%, -18%);
-    border-width: 3px 5px;
-    border-color: lightslategray;
-    border-style: solid;
-    color: darkslategray;
-    background: #ADA996;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: 10;
+  padding: 10px 30px;
+  letter-spacing: 4px;
+  transform: translate(-50%, -18%);
+  border-width: 3px 5px;
+  border-color: lightslategray;
+  border-style: solid;
+  color: darkslategray;
+  background: #ada996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 /* hr sep line ends here */
-
 
 /* parallex starts here */
 
@@ -83,277 +87,303 @@ h3.line-up-text-2 {
 #bg-img3,
 #bg-img4,
 #bg-img5 {
-    opacity: 0.7;
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    flex-shrink: 0;
+  opacity: 0.7;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 span.border {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
 }
 
-
 /* parallex ends here */
-
 
 /* custom Carousel CSS */
 
 .carousel-container {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-container button {
-    opacity: 0.6;
-    border-radius: 20px;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
-    border: none;
-    z-index: 10;
-    position: absolute;
-    outline: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  opacity: 0.6;
+  border-radius: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  border: none;
+  z-index: 10;
+  position: absolute;
+  outline: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 
 /* for removing blue outline from button when focused */
 
 .carousel-container button:focus {
-    outline: none;
+  outline: none;
 }
 
 .carousel-slides {
-    flex-wrap: wrap;
-    display: flex;
-    width: 100%;
-    min-height: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
 }
 
 #bg-img1,
 #bg-img5 {
-    background-image: url("/img4.jpg");
-    min-height: 100%;
+  background-image: url("/img4.jpg");
+  min-height: 100%;
 }
 
 #bg-img2 {
-    background-image: url("/img32.jpg");
-    min-height: 100%;
+  background-image: url("/img32.jpg");
+  min-height: 100%;
 }
 
 #bg-img3 {
-    background-image: url("/img4.jpg");
-    min-height: 100%;
+  background-image: url("/img4.jpg");
+  min-height: 100%;
 }
 
 #bg-img4 {
-    background-image: url("/img32.jpg");
-    min-height: 100%;
+  background-image: url("/img32.jpg");
+  min-height: 100%;
 }
 
-
 /* custom Carousel CSS ends here */
-
 
 /* overflowed elements css to make them overflow */
 
 .custom-container {
-    transform: translateY(-40%);
+  transform: translateY(-40%);
 }
 
-
 /* end of overflow */
-
 
 /* pink sign up box */
 
 .segment {
-    font-family: "Lato", sans-serif;
-    color: black;
-    letter-spacing: 3px;
-    padding: 30px;
-    background-color: bisque;
-    border-radius: 0 15px;
+  font-family: "Lato", sans-serif;
+  color: black;
+  letter-spacing: 3px;
+  padding: 30px;
+  background-color: bisque;
+  border-radius: 0 15px;
 }
 
 .segment h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
 }
-
 
 /* end of pink sign up box */
 
 .caption {
-    position: absolute;
-    left: 0;
-    top: 70%;
-    width: 100%;
-    text-align: center;
-    color: #000;
+  position: absolute;
+  left: 0;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  color: #000;
 }
 
 .caption span {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-
 
 /* fade effect slides */
 
 #fade-header {
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 #fade-header a {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .slideshow {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    list-style: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
 }
 
 .slideshow li {
-    width: 97%;
-    height: 99%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(1.5%);
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 40s linear infinite;
+  width: 97%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(1.5%);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 40s linear infinite;
 }
 
 .slideshow li:nth-child(1) {
-    background-image: url("/img2.jpg");
+  background-image: url("/img2.jpg");
 }
 
 .slideshow li:nth-child(2) {
-    background-image: url("/img3.jpg");
-    animation-delay: 8s;
+  background-image: url("/img3.jpg");
+  animation-delay: 8s;
 }
 
 .slideshow li:nth-child(3) {
-    background-image: url("/img4.jpg");
-    animation-delay: 16s;
+  background-image: url("/img4.jpg");
+  animation-delay: 16s;
 }
 
 .slideshow li:nth-child(4) {
-    background-image: url("/img5.jpg");
-    animation-delay: 24s;
+  background-image: url("/img5.jpg");
+  animation-delay: 24s;
 }
 
 .slideshow li:nth-child(5) {
-    background-image: url("/img6.jpg");
-    animation-delay: 32s;
+  background-image: url("/img6.jpg");
+  animation-delay: 32s;
 }
 
 @keyframes imageAnimation {
-    0% {
-        opacity: 0;
-        animation-timing-function: ease-in;
-    }
-    10% {
-        opacity: 1;
-        animation-timing-function: ease-out;
-    }
-    20% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
 }
 
-
 /* fade effect slides ends here */
-
 
 /* overriding img-thumbnail of bootstrap using custom class*/
 
 img.custom-thumbnail {
-    padding: 0px;
-    border: 0px;
+  padding: 0px;
+  border: 0px;
 }
 
-
 /* end */
-
 
 /* categories */
 
 .category {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
 /* categories ends */
-
 
 /* footer */
 
 .footer {
-    background-color: rgba(20, 39, 57, 1);
-    padding-bottom: 10px;
-    color: white;
-    border-radius: 20px 20px 0px 0px;
-    margin-top: 80px;
-    height: auto !important;
+  background-color: rgba(20, 39, 57, 1);
+  padding-bottom: 10px;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+  margin-top: 80px;
+  height: auto !important;
 }
-
-
 /* footer ends */
 
+/* Ribbon */
+.ribbon {
+  position: absolute;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+  border-color: rgba(0, 0, 0, 0.15);
+  top: 1rem;
+  z-index: 5;
+  left: calc(-0.05rem - 1.2em);
+  margin-right: -1.2em;
+  padding-left: calc(1rem + 1.2em);
+  padding-right: 1.2em;
+  background-color: #00b5ad !important;
+  border-color: #00b5ad !important;
+  color: #ffffff !important;
+}
+.ribbon:hover {
+  background-color: #009c95 !important;
+  border-color: #009c95 !important;
+  color: #ffffff !important;
+}
+
+.ribbon::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0%;
+  background-color: transparent !important;
+  border-style: solid;
+  border-width: 0em 1.2em 1.2em 0em;
+  border-color: transparent;
+  border-right-color: inherit;
+  width: 0em;
+  height: 0em;
+}
+
+/* Ribbon ends */
+
+#women {
+    display: none;
+}
 
 /* media queries */
 
 @media (max-width: 767.98px) {
-    .slideshow li.rounded {
-        width: 93%;
-        transform: translateX(3.5%);
-    }
+  .slideshow li.rounded {
+    width: 93%;
+    transform: translateX(3.5%);
+  }
 }
 
 @media (max-width: 575.98px) {
-    ul.slideshow {
-        height: 350px;
-    }
+  ul.slideshow {
+    height: 350px;
+  }
 }
 
 @media (min-width: 992px) {
-    .testimonial-left {
-        transform: translate(-10%, -5%);
-    }
+  .testimonial-left {
+    transform: translate(-10%, -5%);
+  }
 }
-
 
 /* media queries ends here */
