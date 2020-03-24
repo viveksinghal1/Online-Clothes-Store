@@ -83,7 +83,7 @@ app.post("/register", function(req, res) {
                 return res.redirect("back");
               }
               passport.authenticate("local")(req, res, function() {
-                req.flash("success", "Welcome to ShopBest" + user.username);
+                req.flash("success", "Welcome to ShopBest " + user.username);
                 return res.redirect(req.get("referer"));
               });
             });
@@ -150,12 +150,10 @@ app.get("/addtocart/:id", middleware.isLoggedIn, function(req, res){
                     req.flash("error", err.message);
                     res.redirect("back");
                 } else {
-                    let newOrder = new Order({
-                        clothID: cloth._id
-                    });
-
                     try {
-                        let order = await Order.create(newOrder);
+                        let order = await Order.create({
+                          clothname: cloth.name
+                        });
                         user.cart.push(order);
                         await user.save();
                         req.flash("success", "Added the " + cloth.name + " to your cart.");
@@ -168,6 +166,16 @@ app.get("/addtocart/:id", middleware.isLoggedIn, function(req, res){
             });
         }
     });
+});
+
+app.get("/users/:id", function(req, res) {
+  User.findById(req.params.id).populate('cart').exec(function(err, foundUser){
+    if (err || !foundUser) {
+      req.flash("error", err.message);
+    } else {
+      res.render("show", {foundUser: foundUser});
+    }
+  });
 });
 
 app.listen(PORT, process.env.IP, function() {

@@ -1,182 +1,207 @@
 <%- include("./partials/header") %>
 
-    <!-- Custom Carousel -->
+<!-- Custom Carousel -->
 
-    <div class="carousel-container">
-        <button><span class="border">ShopBest</span></button>
-        <div class="carousel-slides">
-            <% for(let i=1;i<=5;i++) { %>
-                <div id="bg-img<%=i%>"></div>
-            <% } %>
+<div class="carousel-container">
+    <button><span class="border">ShopBest</span></button>
+    <div class="carousel-slides">
+        <% for(let i=1;i<=5;i++) { %>
+        <div id="bg-img<%=i%>"></div>
+        <% } %>
+    </div>
+</div>
+
+<!-- three overflowed images -->
+<div class="container custom-container">
+    <div class="row">
+        <% for(let i=2;i<=4;i++) { %>
+        <div class="col-4">
+            <img src="/img<%=i%>.jpg" alt=""
+                class="img-thumbnail custom-thumbnail">
+        </div>
+        <% } %>
+    </div>
+</div>
+
+<!-- 3 overflow images ends here -->
+
+<div class="container-fluid">
+    <div class="row mt-4 mt-sm-0">
+        <div class="col-12">
+            <hr class="line-across">
+            <h3 class="line-up-text"><span>ShopBest</span></h3>
         </div>
     </div>
-
-    <!-- three overflowed images -->
-    <div class="container custom-container">
-        <div class="row">
-            <% for(let i=2;i<=4;i++) { %>
-                <div class="col-4">
-                    <img src="/img<%=i%>.jpg" alt="" class="img-thumbnail custom-thumbnail">
+    <div class="row mt-5">
+        <div class="col-sm-4 col-xs-12">
+            <div class="row">
+                <div class="col-12">
+                    <a class="caption"><span
+                            class="btn btn-light rounded-0">Book An
+                            Appointment</span></a>
+                    <img src="/img7.jpg" class="img-thumbnail custom-thumbnail">
                 </div>
-            <% } %>
+            </div>
+
+            <!-- sign up pink section left to fade slides -->
+            <div class="row my-2 h-50">
+                <div class="col-12 align-self-center">
+                    <div class="segment">
+                        <h1>Become a member now to experience the best sevice
+                        </h1>
+                        <br>
+                        <a class="btn btn-light mt-3">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <!-- sign up pink section ends -->
+
+        </div>
+        <!-- fade effect slides -->
+        <div class="col-sm-8 col-xs-12">
+            <div id="fade-header">
+                <a href="#" class="btn btn-lg btn-light rounded-0">View All
+                    Suits</a>
+            </div>
+            <ul class="slideshow">
+                <% for (let i=0;i<=4;i++) { %>
+                <li class="rounded"></li>
+                <% } %>
+            </ul>
+        </div>
+        <!-- fade effect slides effect ends here -->
+    </div>
+
+    <div class="row my-5">
+        <div class="col-12">
+            <hr class="line-across" style="border-top-color:lightslategray;">
+            <h3 class="line-up-text-2">
+                Categories</h3>
         </div>
     </div>
 
-    <!-- 3 overflow images ends here -->
-
-    <div class="container-fluid">
-        <div class="row mt-4 mt-sm-0">
-            <div class="col-12">
-                <hr class="line-across">
-                <h3 class="line-up-text"><span>ShopBest</span></h3>
+    <div class="row mt-4">
+        <div class="col-sm-4">
+            <div class="row h-15">
+                <div class="col-12">
+                    <h3 class="text-center category">ReadyMade</h3>
+                </div>
+            </div>
+            <div class="row h-85">
+                <div class="col-12"><img src="/img1.jpg"
+                        class="img-thumbnail custom-thumbnail"></div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-sm-4 col-xs-12">
+        <div class="col-sm-4 mt-2 mt-sm-0">
+            <div class="row h-15">
+                <div class="col-12">
+                    <h3 class="text-center category">Custom Suits</h3>
+                </div>
+            </div>
+            <div class="row h-85">
+                <div class="col-12"><img src="/img1.jpg"
+                        class="img-thumbnail custom-thumbnail"></div>
+            </div>
+        </div>
+        <div class="col-sm-4 mt-2 mt-sm-0">
+            <div class="row h-15">
+                <div class="col-12">
+                    <h3 class="text-center category">Visit our showrooms</h3>
+                </div>
+            </div>
+            <div class="row h-85">
+                <div class="col-12"><img src="/img1.jpg"
+                        class="img-thumbnail custom-thumbnail"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Testimonials -->
+
+<!-- <div class="container">
+    <div class="row justify-content-center my-5">
+        <div class="col-md-7">
+            <h1 class="font-weight-light text-center">Testimonials</h1>
+        </div>
+    </div>
+
+    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-item active">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <a class="caption"><span
-                                class="btn btn-light rounded-0">Book An
-                                Appointment</span></a>
-                        <img src="/img7.jpg" class="img-thumbnail custom-thumbnail">
+                    <div class="col-md-6 mb-5">
+                        <img src="/img_1.jpg" alt="Image" class="d-block w-100">
+                    </div>
+                    <div
+                        class="testimonial-left col-md-6 bg-white p-md-5 align-self-center">
+                        <p class="text-black lead">&ldquo;Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit. Similique
+                            dolorem quisquam laudantium, incidunt id laborum,
+                            tempora aliquid labore minus. Nemo maxime, veniam!
+                            Fugiat odio nam eveniet ipsam atque, corrupti
+                            porro&rdquo;
+                        </p>
+                        <p class="">&mdash; <em>James Martin</em></p>
                     </div>
                 </div>
-
-                <!-- sign up pink section left to fade slides -->
-                <div class="row my-2 h-50">
-                    <div class="col-12 align-self-center">
-                        <div class="segment">
-                            <h1>Become a member now to experience the best sevice
-                            </h1>
-                            <br>
-                            <a class="btn btn-light mt-3">Sign Up</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- sign up pink section ends -->
-
-            </div>
-            <!-- fade effect slides -->
-            <div class="col-sm-8 col-xs-12">
-                <div id="fade-header">
-                    <a href="#" class="btn btn-lg btn-light rounded-0">View All Suits</a>
-                </div>
-                <ul class="slideshow">
-                    <% for (let i=0;i<=4;i++) { %>
-                        <li class="rounded"></li>
-                    <% } %>
-                </ul>
-            </div>
-            <!-- fade effect slides effect ends here -->
-        </div>
-
-        <div class="row my-5">
-            <div class="col-12">
-                <hr class="line-across" style="border-top-color:lightslategray;">
-                <h3 class="line-up-text-2">
-                    Categories</h3>
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-sm-4">
-                <div class="row h-15">
-                    <div class="col-12">
-                        <h3 class="text-center category">ReadyMade</h3>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <img src="/img_2.jpg" alt="Image" class="d-block w-100">
                     </div>
-                </div>
-                <div class="row h-85">
-                    <div class="col-12"><img src="/img1.jpg" class="img-thumbnail custom-thumbnail"></div>
-                </div>
-            </div>
-            <div class="col-sm-4 mt-2 mt-sm-0">
-                <div class="row h-15">
-                    <div class="col-12">
-                        <h3 class="text-center category">Custom Suits</h3>
+                    <div
+                        class="testimonial-left col-md-6 bg-white p-md-5 align-self-center">
+                        <p class=" text-black lead ">&ldquo;Lorem ipsum dolor
+                            sit amet, consectetur adipisicing elit. Similique
+                            dolorem quisquam laudantium, incidunt id laborum,
+                            tempora aliquid labore minus. Nemo maxime, veniam!
+                            Fugiat odio nam eveniet ipsam atque, corrupti
+                            porro&rdquo;
+                        </p>
+                        <p class=" ">&mdash; <em>Clair Augustin</em></p>
                     </div>
-                </div>
-                <div class="row h-85">
-                    <div class="col-12"><img src="/img1.jpg" class="img-thumbnail custom-thumbnail"></div>
-                </div>
-            </div>
-            <div class="col-sm-4 mt-2 mt-sm-0">
-                <div class="row h-15">
-                    <div class="col-12">
-                        <h3 class="text-center category">Visit our showrooms</h3>
-                    </div>
-                </div>
-                <div class="row h-85">
-                    <div class="col-12"><img src="/img1.jpg" class="img-thumbnail custom-thumbnail"></div>
                 </div>
             </div>
         </div>
+
+        <div class="carousel-item ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-6 mb-5 ">
+                        <img src="/img_4.jpg " alt="Image "
+                            class="d-block w-100 ">
+                    </div>
+                    <div
+                        class="testimonial-left col-md-6 bg-white p-md-5 align-self-center">
+                        <p class="text-black lead">&ldquo;Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit. Similique
+                            dolorem quisquam laudantium, incidunt id laborum,
+                            tempora aliquid labore minus. Nemo maxime, veniam!
+                            Fugiat odio nam eveniet ipsam atque, corrupti
+                            porro&rdquo;
+                        </p>
+                        <p class="">&mdash; <em>James Martin</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#testimonialCarousel"
+            role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
     </div>
+</div> -->
 
-
-    <!-- Testimonials -->
-
-    <!-- <div class="container">
-        <div class="row justify-content-center my-5">
-            <div class="col-md-7">
-                <h1 class="font-weight-light text-center">Testimonials</h1>
-            </div>
-        </div>
-
-        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 mb-5">
-                            <img src="/img_1.jpg" alt="Image" class="d-block w-100">
-                        </div>
-                        <div class="testimonial-left col-md-6 bg-white p-md-5 align-self-center">
-                            <p class="text-black lead">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;
-                            </p>
-                            <p class="">&mdash; <em>James Martin</em></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 mb-5">
-                            <img src="/img_2.jpg" alt="Image" class="d-block w-100">
-                        </div>
-                        <div class="testimonial-left col-md-6 bg-white p-md-5 align-self-center">
-                            <p class=" text-black lead ">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;
-                            </p>
-                            <p class=" ">&mdash; <em>Clair Augustin</em></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-md-6 mb-5 ">
-                            <img src="/img_4.jpg " alt="Image " class="d-block w-100 ">
-                        </div>
-                        <div class="testimonial-left col-md-6 bg-white p-md-5 align-self-center">
-                            <p class="text-black lead">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;
-                            </p>
-                            <p class="">&mdash; <em>James Martin</em></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-
-        </div>
-    </div> -->
-
-    <!-- Testimonials ends -->
+<!-- Testimonials ends -->
 
 <%- include("./partials/footer") %>
