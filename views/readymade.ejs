@@ -2,62 +2,67 @@
 
 <div class="container mt-3">
     <header class="jumbotron">
-        <h1>Welcome to YelpCamp page!</h1>
-        <p>Naviagate through our hand-picked campgrounds from all over the world
+        <h1>Welcome to Readymade Section</h1>
+        <p>Naviagate Through Our Hand-Picked Clothes For This Season
         </p>
-        <a class="btn btn-primary" href="#">Add new
-            Campground</a>
+        <!-- <a class="btn btn-primary" href="#">Add new
+            Campground</a> -->
     </header>
-    <div class="row mb-3">
-        <div class="col-lg-12">
-            <h3 class="text-center text-muted">Our most popular campgrounds</h3>
-        </div>
-    </div>
-
-    <div class="row justify-content-center mb-3">
-        <ul class="nav nav-tabs">
+    
+    <div class="row justify-content-center">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-              <button class="nav-link active" onclick="displayMen(this)" style="outline: none;">Men</button>
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">MEN</a>
             </li>
             <li class="nav-item">
-              <button class="nav-link" onclick="displayWomen(this)" style="outline: none;">Women</button>
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">WOMEN</a>
             </li>
-        </ul>
-    </div>
-
-    <div class="row mb-2" id="men">
-        <% gentsCloths.forEach(function(readymade){ %>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card">
-                    <a class="ribbon">INR <%=readymade.price%></a>
-                    <img src="<%= readymade.image %>" class="card-img-top p-1" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"><%=readymade.name%></h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <p><%=readymade.category%></p>
-                      <a href="#" class="btn btn-primary">Buy</a>
-                    </div>
-                  </div>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <% gentsCloths.forEach(function(readymade){ %>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-3 d-flex align-items-stretch">
+                            <div class="card">
+                                <a class="ribbon">INR <%=readymade.price%></a>
+                                <img src="<%= readymade.image %>" class="card-img-top p-1" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title"><%=readymade.name%></h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- <p><%=readymade.category%></p> -->
+                                  <a href="#" class="btn btn-primary">Buy</a>
+                                  <a href="/addtocart/<%=readymade._id%>" class="btn btn-danger float-right"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i>
+                                  </a>
+                                </div>
+                              </div>
+                        </div>
+                    <% }); %>
+                </div>
             </div>
-        <% }); %>
-    </div>
-
-    <div class="row mb-2" id="women">
-        <% ladiesCloths.forEach(function(readymade){ %>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card">
-                    <a class="ribbon">INR <%=readymade.price%></a>
-                    <img src="<%= readymade.image %>" class="card-img-top p-1" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"><%=readymade.name%></h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <p><%=readymade.category%></p>
-                      <a href="#" class="btn btn-primary">Buy</a>
-                    </div>
-                  </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row">
+                    <% ladiesCloths.forEach(function(readymade){ %>
+                        <div class="col-lg-3 col-md-4 col-sm-6 mt-3 d-flex align-items-stretch">
+                            <div class="card">
+                                <a class="ribbon">INR <%=readymade.price%></a>
+                                <img src="<%= readymade.image %>" class="card-img-top p-1" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title"><%=readymade.name%></h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <!-- <p><%=readymade.category%></p> -->
+                                  <a href="#" class="btn btn-primary">Buy</a>
+                                  <a href="/addtocart/<%=readymade._id%>" class="btn btn-danger float-right"><i class="fa fa-shopping-cart"
+                                    aria-hidden="true"></i>
+                                  </a>
+                                </div>
+                              </div>
+                        </div>
+                    <% }); %>
+                </div>
             </div>
-        <% }); %>
+            </div>
+          </div>
     </div>
-</div>
 
 <%- include("./partials/footer") %>

@@ -169,7 +169,7 @@ span.border {
 /* overflowed elements css to make them overflow */
 
 .custom-container {
-  transform: translateY(-40%);
+  transform: translateY(-32%);
 }
 
 /* end of overflow */
@@ -311,13 +311,16 @@ img.custom-thumbnail {
 
 /* footer */
 
-.footer {
+footer.footer {
+  position: relative;
   background-color: rgba(20, 39, 57, 1);
   padding-bottom: 10px;
   color: white;
   border-radius: 20px 20px 0px 0px;
-  margin-top: 80px;
   height: auto !important;
+  margin-top: 80px;
+  margin-bottom: 0;
+  top: 100;
 }
 /* footer ends */
 
@@ -335,13 +338,14 @@ img.custom-thumbnail {
   margin-right: -1.2em;
   padding-left: calc(1rem + 1.2em);
   padding-right: 1.2em;
+  background-color: white !important;
   background-color: #00b5ad !important;
-  border-color: #00b5ad !important;
+  border-color: #78ffd6 !important;
   color: #ffffff !important;
 }
 .ribbon:hover {
   background-color: #009c95 !important;
-  border-color: #009c95 !important;
+  border-color: #09e2d7 !important;
   color: #ffffff !important;
 }
 
@@ -361,8 +365,53 @@ img.custom-thumbnail {
 
 /* Ribbon ends */
 
-#women {
-    display: none;
+.navbar-light .navbar-nav .nav-link {
+  letter-spacing: 1px;
+  padding: 0.5rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.form-group .form-control {
+  min-height: calc(1.5em + 1.2rem + 2px);
+  padding: 1.5em;
+  font-size: 1.1rem;
+  border-radius: 0rem;
+  border: none;
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+.form-group .form-control:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.container-md {
+  max-width: 75%;
+}
+
+.card {
+  transition-property: box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+.card:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.14), 0 7px 7px 0 rgba(0, 0, 0, 0.12),
+    0 2px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+#toastElement {
+  z-index: 5;
+  position: absolute;
+  top: 8vh;
+  right: 4vw;
+  min-width: 25vw;
 }
 
 /* media queries */
@@ -371,6 +420,19 @@ img.custom-thumbnail {
   .slideshow li.rounded {
     width: 93%;
     transform: translateX(3.5%);
+  }
+  .container-md {
+    max-width: 98%;
+  }
+
+  .custom-form {
+    min-width: 85%;
+  }
+
+  #toastElement {
+    min-width: 70vw;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
