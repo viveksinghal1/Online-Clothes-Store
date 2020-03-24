@@ -12,4 +12,4 @@ const clothSchema = mongoose.Schema({
     category: String
 });
 
-module.exports = mongoose.model("Cloth", clothSchema);
+module.exports = mongoose.model('Cloth', clothSchema);
